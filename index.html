@@ -21,6 +21,24 @@
   <span id="bestPracticesDate"></span>
   <p id="bestPracticesDescription"></p>
   
+  <!-- JAVASCRIPT BASICS EXERCISE 2 -->
+  <h1>Calculator</h1>
+  <p>Use the drop-down menu to navigate between the different mathematical expressions.</p>
+  <p> Note: ** is for exponent (raises the first number to 'the power of' the second number), and % is for modulo (the remainder once the first number is divided by the second number). </p>
+  
+  <input id="firstOperand" placeholder="0" value="0" type="text">
+  <select name="operators" id="operators">
+    <option value="add">+</option>
+    <option value="subtract">-</option>
+    <option value="multiply">*</option>
+    <option value="divide">/</option>
+    <option value="exponent">**</option>
+    <option value="modulo">%</option>  
+  </select>
+  <input id="secondOperand" placeholder="0" value="0" type="text">
+  <button id="button" onclick="calculate()"> =</button>
+  <span id="result"></span>
+
   <script src="script.js"></script>
 </body>
 

@@ -32,3 +32,44 @@ let accessibilityMatters= {
   bestPracticesTitle.textContent = bestPractices.title;
   bestPracticesDate.textContent = bestPractices.date;
   bestPracticesDescription.textContent = bestPractices.description;
+
+  // JAVASCRIPT BASICS EXERCISE 2
+  function calculate(){
+    let firstOperand = Number(document.getElementById("firstOperand").value);
+    let operator = document.getElementById ("operators").value;
+    let secondOperand = Number(document.getElementById("secondOperand").value);
+    let resultSpan = document.getElementById("result");
+      let resultNum = null;
+      
+    switch (operator) {
+      case 'add':
+        resultNum = firstOperand + secondOperand;
+        resultSpan.innerHTML = resultNum;
+        break;
+      case 'subtract':
+        resultNum = firstOperand - secondOperand;
+        resultSpan.innerHTML = resultNum;
+        break;
+      case 'multiply':
+        resultNum = firstOperand * secondOperand;
+        resultSpan.innerHTML = resultNum;
+        break;
+      case 'divide':
+        resultNum = firstOperand / secondOperand;
+        resultSpan.innerHTML = resultNum;
+        break;
+      case 'exponent':
+        resultNum = Math.pow(firstOperand, secondOperand);
+        resultSpan.innerHTML = resultNum;
+        break;
+      case 'modulo':
+        resultNum = firstOperand % secondOperand;
+        resultSpan.innerHTML = resultNum;
+        break;
+      default:
+        alert('No operator found!')
+      }
+    }
+    
+    let button = document.getElementById("button");
+    button.addEventListener ('click', calculate);
