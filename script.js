@@ -73,3 +73,44 @@ let accessibilityMatters= {
     
     let button = document.getElementById("button");
     button.addEventListener ('click', calculate);
+
+    // JAVASCRIPT BASICS EXERCISE 3
+    function compare(){
+      let firstOperand = Number(document.getElementById("firstOperand").value);
+      let operator = document.getElementById ("operators").value;
+      let secondOperand = Number(document.getElementById("secondOperand").value);
+      let resultSpan = document.getElementById("result");
+        let resultNum = null;
+      
+      switch (operator) {
+        case 'greater than':
+         if (firstOperand > secondOperand) {
+           resultSpan.innerHTML = "true";
+         }
+        else {
+          resultSpan.innerHTML = "false";
+        }
+          break;
+        case 'less than':
+         if (firstOperand < secondOperand) {
+           resultSpan.innerHTML = "true";
+         }
+         else {
+           resultSpan.innerHTML = "false";
+         }
+          break;
+        case 'not equal to':
+          if (firstOperand != secondOperand) {
+            resultSpan.innerHTML = "true";
+          }
+          else {
+            resultSpan.innerHTML = "false";
+          }
+          break;
+        default:
+          alert('No operator found!')
+        }
+      }
+      
+      let button = document.getElementById("button");
+      button.addEventListener ('click', compare);
