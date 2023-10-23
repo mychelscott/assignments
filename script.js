@@ -114,3 +114,32 @@ let accessibilityMatters= {
       
       let button = document.getElementById("button");
       button.addEventListener ('click', compare);
+
+
+    // <!-- JAVASCRIPT BASICS EXERCISE 4 / LOCAL TIMER -->
+    // local-scoped function
+function updateLocalTime() {
+  // function-scoped variables for local time
+ let localTime = document.getElementById ("local-time");
+
+  // get the current local time
+  const localDate = new Date().getTime();
+  const localHours = new Date().getHours();
+  const localMinutes = new Date().getMinutes();
+  const localSeconds = new Date().getSeconds();
+
+  // formats the time string as 24 hour clock
+  const localTimeString = `${localHours}:${localMinutes}:${localSeconds}`;
+
+  // updates the html of the local time element
+  localTime.textContent = `${localTimeString}` ;
+}
+  // function to start the local timer.
+  function startLocalTimer(){
+    // 1000 is used to represent milliseconds. Time is being updated every second.
+    const localTimer = 
+    setInterval(updateLocalTime,1000);
+  }
+let localButton = document.getElementById ("localTimerButton");
+
+localTimerButton.addEventListener("click", startLocalTimer);
